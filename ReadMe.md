@@ -1,5 +1,5 @@
 # Introduction 
-An C++ STL based implementation of LZW (Lempel–Ziv–Welch) compression algorithm;
+A C++ STL based implementation of LZW (Lempel–Ziv–Welch) compression algorithm;
 inspired by the following repos:
 
 - https://github.com/pieroxy/lz-string (author website: http://pieroxy.net/blog/pages/lz-string/index.html)
