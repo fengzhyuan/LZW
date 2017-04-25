@@ -26,7 +26,7 @@ Implemented the following encoder/decoders:
 
  Test case (non-standard / messy version):
 
- The file `data.json` is used for test purpose; below is the output of local machine:
+ The file `data.json` is used for test purpose; below is the output of local machine (seconds):
 
 
  `[Test UTF16]`
