@@ -33,7 +33,7 @@ void Test() {
     decompress = LZString::DecompressFromBase64(compress);
     dst = LZString::ToStr(decompress);
     t2 = clock() - t1;
-    cout << "[Test UTF16]\n";
+    cout << "[Test Base64]\n";
     cout << "string length:" << str.length()*sizeof(char) << " compress ratio:" << 
         (float)(decompress.length()/compress.length()) << endl;
     cout << (float)t2/CLOCKS_PER_SEC << endl;

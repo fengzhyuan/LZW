@@ -37,7 +37,7 @@ Implemented the following encoder/decoders:
 
 `checking result [compressed == decompressed]:1`
 
-`[Test UTF16]`
+`[Test Base64]`
 
 `string length:1161529 compress ratio:8`
 
