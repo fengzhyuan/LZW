@@ -22,7 +22,7 @@ Implemented the following encoder/decoders:
    (`wcstombs` and `wsctombs_s` always return error code `42`, any one knows how
    to do it correctly?)
     
- Each method provides 2 APIs for different parameters `std::string` and `std::wstring`, respectively.
+ ~~Each method provides 2 APIs for different parameters `std::string` and `std::wstring`, respectively.~~
 
  Test case (non-standard / messy version):
 
