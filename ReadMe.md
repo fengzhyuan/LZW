@@ -28,11 +28,18 @@ Implemented the following encoder/decoders:
 
  The file `data.json` is used for test purpose; below is the output of local machine:
  `[Test UTF16]
+
 string length:1161529 compress ratio:21
+
 0.438
+
 checking result [compressed == decompressed]:1
+
 [Test UTF16]
+
 string length:1161529 compress ratio:8
+
 0.431
+
 checking result [compressed == decompressed]:1`
  
