@@ -27,19 +27,19 @@ Implemented the following encoder/decoders:
  Test case (non-standard / messy version):
 
  The file `data.json` is used for test purpose; below is the output of local machine:
- `[Test UTF16]
+ `[Test UTF16]`
 
-string length:1161529 compress ratio:21
+`string length:1161529 compress ratio:21`
 
-0.438
+`0.438`
 
-checking result [compressed == decompressed]:1
+`checking result [compressed == decompressed]:1`
 
-[Test UTF16]
+`[Test UTF16]`
 
-string length:1161529 compress ratio:8
+`string length:1161529 compress ratio:8`
 
-0.431
+`0.431`
 
-checking result [compressed == decompressed]:1`
+`checking result [compressed == decompressed]:1`
  
