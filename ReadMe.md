@@ -29,19 +29,23 @@ Implemented the following encoder/decoders:
  The file `data.json` is used for test purpose; below is the output of local machine (seconds):
 
 
- `[Test UTF16]`
+`[Test Default algorithm]`  
+=================  
+string length:`1161516` compress ratio:`23`  
+time elapsed (s): `0.486`  
+checking correctness: [string compressed == decompressed]:`1`  
+=================  
 
-`string length:1161529 compress ratio:21`
+`[Test UTF16]`  
+=================  
+string length:`1161516` compress ratio:`21`  
+time elapsed (s): `0.457`  
+checking correctness: [string compressed == decompressed]:`1`  
+=================  
 
-`0.438`
-
-`checking result [compressed == decompressed]:1`
-
-`[Test Base64]`
-
-`string length:1161529 compress ratio:8`
-
-`0.431`
-
-`checking result [compressed == decompressed]:1`
- 
+`[Test Base64]`  
+=================  
+string length:`1161516` compress ratio:`8`  
+time elapsed (s): `0.468`  
+checking correctness: [string compressed == decompressed]:`1`  
+=================  

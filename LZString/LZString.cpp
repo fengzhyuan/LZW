@@ -5,7 +5,6 @@
 
 const wstring LZString::key_str = L"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 
-
 long ipow(double x, int n) {
     if (!n) return 1;
     if (n < 0) {
@@ -339,6 +338,18 @@ wstring LZString::DecompressFromBase64(string &compressed) {
     return LZString::DecompressFromBase64(wstr);
 }
 
-wstring LZString::CompressToEncodedURIComponent(wstring &uncompressed) {
-
-}
+//wstring LZString::CompressToEncodedURIComponent(wstring &uncompressed) {
+//
+//}
+//
+//wstring LZString::CompressToEncodedURIComponent(string &uncompressed) {
+//
+//}
+//
+//wstring LZString::DecompressFromEncodedURIComponent(wstring &compressed) {
+//
+//}
+//
+//wstring LZString::DecompressFromEncodedURIComponent(string &compressed) {
+//
+//}

@@ -21,15 +21,20 @@ https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch
 #include <string>
 using namespace std;
 
-/*!
+/**
     inner data structure for compression  
-*/
+    each characters are encoded/decoded as Unicode, so wide chars are used here (wstring)
+ */
 struct ContextCompressData {
     wstring str;
     int val, pos;
     ContextCompressData():str(L""), val(0), pos(0){}
     ContextCompressData(wstring &s_, int v_, int p_):str(s_), val(v_), pos(p_){}
 };
+
+/**
+    inner data structure; to encode original data (string)
+ */
 
 struct ContextCompress {
     unordered_map<wstring, int> dict;
@@ -42,7 +47,7 @@ struct ContextCompress {
     Wc(wc_), W(w_),enlarge_in(en_), dict_size(ds_), num_bits(nb_){}
 };
 
-/*!
+/**
     inner data structure for decompression
 */
 struct DecompressData {
@@ -52,8 +57,11 @@ struct DecompressData {
     DecompressData(wstring &s_, int v_, int p_, int i_):str(s_), val(v_), pos(p_), indx(i_){}
 };
 
-/*!
-    wrapped API
+/**
+    class LZString; wrapped APIs for outer calls;
+    each method are provided with 2 APIs: string and wstring;
+    TODO:
+        implement CompressToEncodedURIComponent/DecompressFromEncodedURIComponent
 */
 class LZString {
 public:
@@ -69,10 +77,10 @@ public:
     static wstring  CompressToBase64(string &uncompressed);
     static wstring  DecompressFromBase64(wstring &compressed);
     static wstring  DecompressFromBase64(string &compressed);
-    static wstring  CompressToEncodedURIComponent(wstring &uncompressed);
-    static wstring  CompressToEncodedURIComponent(string &uncompressed);
-    static wstring  DecompressFromEncodedURIComponent(wstring &compressed);
-    static wstring  DecompressFromEncodedURIComponent(string &compressed);
+    //static wstring  CompressToEncodedURIComponent(wstring &uncompressed);
+    //static wstring  CompressToEncodedURIComponent(string &uncompressed);
+    //static wstring  DecompressFromEncodedURIComponent(wstring &compressed);
+    //static wstring  DecompressFromEncodedURIComponent(string &compressed);
 
     static wstring  ToWStr(const string& str);
     static string   ToStr(const wstring &wstr);
@@ -87,7 +95,7 @@ private:
     static void encode_utf16_char(wstring &rst, int &cur, int c, int i);
     static void decode_utf16_char(wstring &rst, int &cur, int c, int i);
 private:
-    static const wstring key_str;
+    static const wstring key_str; /**< string used for base64 */
 };
 
 #endif 
