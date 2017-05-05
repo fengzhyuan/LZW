@@ -5,7 +5,6 @@
 #include <fstream>
 #include <streambuf>
 #include <iostream>
-#include <functional>
 
 using namespace std;
 
